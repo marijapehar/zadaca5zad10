@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nasumični brojevi</title>
+</head>
+<body>
+  <h2>Pet nasumičnih brojeva:</h2>
+  <div id="rezultat"></div>
+
+  <script>
+    function generirajNasumicneBrojeve(min, max) {
+      const rezultat = [];
+      
+      for (let i = 0; i < 5; i++) {
+        let randomBroj = Math.floor(Math.random() * (max - min + 1)) + min;
+        rezultat.push(randomBroj);
+      }
+      document.getElementById("rezultat").innerHTML = "Nasumični brojevi između " + min + " i " + max + " su: " + rezultat.join(", ");
+    }
+    generirajNasumicneBrojeve(10, 50);
+  </script>
+</body>
+</html>
